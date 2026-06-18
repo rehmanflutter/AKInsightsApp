@@ -1,3 +1,6 @@
+ak-insights-app.vercel.app
+
+
 # AK Insights — Flutter Web (Demo UI)
 
 A 100% responsive, animated Flutter Web app with a pro gradient theme
