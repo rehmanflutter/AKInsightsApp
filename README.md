@@ -1,5 +1,4 @@
-ak-insights-app.vercel.app
-
+https://ak-insights-app.vercel.app/
 
 # AK Insights — Flutter Web (Demo UI)
 
