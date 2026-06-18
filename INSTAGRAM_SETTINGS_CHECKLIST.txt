@@ -1,0 +1,199 @@
+═══════════════════════════════════════════════════════════════
+   INSTAGRAM APP SETTINGS - COMPLETE CHECKLIST
+═══════════════════════════════════════════════════════════════
+
+Go to: https://developers.facebook.com/apps/1165210255788505/
+
+═══════════════════════════════════════════════════════════════
+SECTION 1: APP MODE
+═══════════════════════════════════════════════════════════════
+
+[ ] App Mode: Development (green badge, top-right)
+    If "Live" → Click and switch to "Development"
+
+═══════════════════════════════════════════════════════════════
+SECTION 2: INSTAGRAM BASIC DISPLAY PRODUCT
+═══════════════════════════════════════════════════════════════
+
+[ ] Instagram Basic Display product added
+    Left sidebar → Should show "Instagram Basic Display"
+    If not → Click "Add Product" → Add it
+
+═══════════════════════════════════════════════════════════════
+SECTION 3: CLIENT OAUTH SETTINGS
+═══════════════════════════════════════════════════════════════
+
+Go to: Instagram Basic Display → Basic Display
+
+[ ] Valid OAuth Redirect URIs:
+
+    https://localhost/callback
+
+    ⚠️ EXACT! No http, no port, no trailing slash!
+
+[ ] Deauthorize Callback URL:
+
+    https://localhost/deauth
+
+[ ] Data Deletion Request URL:
+
+    https://localhost/delete
+
+[ ] Clicked "Save Changes" button at bottom
+
+═══════════════════════════════════════════════════════════════
+SECTION 4: INSTAGRAM TESTER ACCOUNT
+═══════════════════════════════════════════════════════════════
+
+Scroll to: "User Token Generator" section
+
+[ ] Click "Add or Remove Instagram Testers"
+
+[ ] Enter YOUR Instagram username (without @)
+    Example: ak_rehman
+
+[ ] Click "Submit"
+
+[ ] Go to Instagram (app or website)
+    Settings → Apps and Websites → Tester Invites
+
+[ ] Find your app and click "Accept"
+
+    ⚠️ CRITICAL: Must accept invite!
+
+═══════════════════════════════════════════════════════════════
+SECTION 5: VERIFY CREDENTIALS
+═══════════════════════════════════════════════════════════════
+
+Go to: Settings → Basic (left sidebar)
+
+[ ] App ID: 1165210255788505
+    ✓ Copy this
+
+[ ] App Secret: [Click "Show"]
+    ✓ Copy this
+
+[ ] Check both match in your code:
+    File: lib/services/instagram_config.dart
+
+    static const String appId = '1165210255788505';
+    static const String appSecret = 'YOUR_SECRET_HERE';
+
+═══════════════════════════════════════════════════════════════
+SECTION 6: PERMISSIONS
+═══════════════════════════════════════════════════════════════
+
+Go to: Instagram Basic Display → Permissions
+
+[ ] instagram_graph_user_profile ✓ Enabled
+[ ] instagram_graph_user_media ✓ Enabled
+
+═══════════════════════════════════════════════════════════════
+SECTION 7: TEST CONFIGURATION
+═══════════════════════════════════════════════════════════════
+
+Go to: Instagram Basic Display → Basic Display
+Scroll to: "User Token Generator"
+
+[ ] Find your Instagram account in list
+
+[ ] Click "Generate Token" button
+
+[ ] If successful → Settings are correct! ✓
+    If error → Go back and fix settings above
+
+═══════════════════════════════════════════════════════════════
+SECTION 8: BACKEND SERVER
+═══════════════════════════════════════════════════════════════
+
+[ ] Terminal open with backend running:
+
+    cd /Users/rehman/Downloads/ak_insights_app/backend
+    npm start
+
+    Should show:
+    🚀 Instagram API Proxy Server running on port 3000
+
+[ ] Browser test: http://localhost:3000/health
+
+    Should show:
+    {"status":"OK","message":"Instagram API Proxy is running"}
+
+═══════════════════════════════════════════════════════════════
+SECTION 9: APP TEST
+═══════════════════════════════════════════════════════════════
+
+[ ] Backend is running (Section 8)
+
+[ ] Open app: http://localhost:8080
+
+[ ] Click "Login with Instagram"
+
+[ ] Dialog shows → Click "Open Instagram Login"
+
+[ ] New tab → Instagram login page loads
+
+[ ] Login with YOUR Instagram credentials
+
+[ ] Click "Allow" to authorize app
+
+[ ] Redirects to: https://localhost/callback?code=XXXXX
+
+[ ] Copy the code (after code=)
+
+[ ] Paste in dialog
+
+[ ] Click "Submit"
+
+[ ] ✓ Your Instagram data should load!
+
+═══════════════════════════════════════════════════════════════
+COMMON ERRORS & FIXES
+═══════════════════════════════════════════════════════════════
+
+Error: "Invalid platform app"
+Fix: Section 4 - Add Instagram tester and accept invite
+
+Error: "Redirect URI mismatch"
+Fix: Section 3 - Use EXACT URI: https://localhost/callback
+
+Error: "User not authorized"
+Fix: Section 4 - Accept tester invite on Instagram
+
+Error: "Failed to get access token"
+Fix: Section 8 - Backend server not running
+
+Error: "App not setup properly"
+Fix: Sections 2-6 - Complete all OAuth settings
+
+═══════════════════════════════════════════════════════════════
+FINAL CHECKLIST BEFORE LOGIN
+═══════════════════════════════════════════════════════════════
+
+Before clicking "Login with Instagram", verify ALL:
+
+✓ [ ] App mode: Development
+✓ [ ] Product: Instagram Basic Display added
+✓ [ ] OAuth URI: https://localhost/callback (exact!)
+✓ [ ] Deauth URI: https://localhost/deauth
+✓ [ ] Delete URI: https://localhost/delete
+✓ [ ] Saved changes in console
+✓ [ ] Instagram account: Added as tester
+✓ [ ] Tester invite: Accepted on Instagram
+✓ [ ] App ID: 1165210255788505 (matches code)
+✓ [ ] App Secret: Matches code
+✓ [ ] Backend: Running on port 3000
+✓ [ ] Health check: http://localhost:3000/health works
+
+If ALL checked → Login will work! 🎉
+If ANY unchecked → Fix it first!
+
+═══════════════════════════════════════════════════════════════
+HELP & DOCUMENTATION
+═══════════════════════════════════════════════════════════════
+
+Detailed Guide: FIX_INSTAGRAM_APP_SETTINGS.md
+Backend Setup: START_HERE.md
+Quick Commands: TERMINAL_COMMANDS.txt
+
+═══════════════════════════════════════════════════════════════

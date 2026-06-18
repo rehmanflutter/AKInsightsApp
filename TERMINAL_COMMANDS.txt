@@ -1,0 +1,41 @@
+# ⚡ COPY/PASTE THESE COMMANDS IN TERMINAL
+
+# ==================================================
+# STEP 1: Fix NPM (One Time - Password Puchega)
+# ==================================================
+sudo chown -R $(whoami) "/Users/rehman/.npm"
+
+
+# ==================================================
+# STEP 2: Go to Backend Folder
+# ==================================================
+cd /Users/rehman/Downloads/ak_insights_app/backend
+
+
+# ==================================================
+# STEP 3: Install Dependencies (One Time)
+# ==================================================
+npm install
+
+
+# ==================================================
+# STEP 4: Start Backend Server (Keep Running!)
+# ==================================================
+npm start
+
+
+# ==================================================
+# You should see:
+# 🚀 Instagram API Proxy Server running on port 3000
+# 📍 Health check: http://localhost:3000/health
+# ==================================================
+
+# KEEP THIS TERMINAL OPEN - Don't close it!
+# Backend must keep running while using the app!
+
+# ==================================================
+# TEST: Open in browser:
+# http://localhost:3000/health
+#
+# Should show: {"status":"OK","message":"Instagram API Proxy is running"}
+# ==================================================
