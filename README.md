@@ -1,6 +1,6 @@
 https://ak-insights-app.vercel.app/
-<img width="1041" height="965" alt="Screenshot 2026-06-18 at 10 57 28 AM" src="https://github.com/user-attachments/assets/32d089a0-b006-437d-ba47-31bc1050ee50" />
-<img width="1041" height="965" alt="Screenshot 2026-06-18 at 10 57 18 AM" src="https://github.com/user-attachments/assets/510560bc-04e7-4e9b-a8f7-359e67a9d5e5" />
+
+
 
 
 # AK Insights — Flutter Web (Demo UI)
@@ -82,3 +82,6 @@ lib/
 and a bottom nav bar (<900px). Stat grids reflow from 3 → 2 → 1 columns
 based on width. Everything scrolls cleanly on mobile, tablet, and
 desktop browsers.
+
+<img width="1041" height="965" alt="Screenshot 2026-06-18 at 10 57 28 AM" src="https://github.com/user-attachments/assets/32d089a0-b006-437d-ba47-31bc1050ee50" />
+<img width="1041" height="965" alt="Screenshot 2026-06-18 at 10 57 18 AM" src="https://github.com/user-attachments/assets/510560bc-04e7-4e9b-a8f7-359e67a9d5e5" />
